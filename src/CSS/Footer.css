@@ -41,12 +41,18 @@
     /* border:3px solid red;  */
     text-align: center;
 }
+.list-unstyled li {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
 
 .button {
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     margin-right: 10%;
     margin-left: 10%;
     text-align: center;

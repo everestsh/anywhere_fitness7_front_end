@@ -7,7 +7,6 @@ const Footer = () =>{
 
     return(
         <div className="footer-section">
-            {/* <div className="container"> */}
                 <div className="row">
                     <div className="col">
                         <Link className="home-button" to='/'>Anywhere Fitness</Link>
@@ -30,13 +29,11 @@ const Footer = () =>{
 
                 </div>
                 
-            {/* </div> */}
-            {/* <hr /> */}
-                    <div className="copyright">
-                        <p className="col-sm">
-                            &copy;{new Date().getFullYear()} Anywhere Fitness | All rights reserved | Terms of Service | Privacy
-                        </p>
-                    </div>
+                <div className="copyright">
+                    <p className="col-sm">
+                        &copy;{new Date().getFullYear()} Anywhere Fitness | All rights reserved | Terms of Service | Privacy
+                    </p>
+                </div>
         </div>
     );
 }
