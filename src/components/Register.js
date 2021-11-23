@@ -1,9 +1,26 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react'
+
 
 import '../CSS/Register.css';
 
 const Register = () => {
+    const initusername ={
+        username:'',
+        password:'',
+        department:''
+    }
+    const [user, setUser] = useState(initusername)
+    console.log("Register ", user)
+    console.log("Register username = ", user.username)
+    console.log("Register ", user)
+
+
+    const handleChange = (e) => {
+        setUser({
+            ...user,
+            [e.target.name]: e.target.value
+        })
+    }
 
     return(
         <div className="register-from">
@@ -13,7 +30,7 @@ const Register = () => {
             <div className="register-context">
                 <form className="form-container" >
                     <div>
-                        <h2>Enter information below</h2>
+                        <h2>Enter information below {user.username}</h2>
                     </div>
                     {/** Username */}
                     <div className="form-group from-username">
@@ -21,7 +38,13 @@ const Register = () => {
                             <h3>Username:</h3>
                         </div>
                         <label className="label-group">
-                            <input/>
+                            <input
+                            type='text'
+                            name='username'
+                            value={user.username}
+                            // placeholder = 'Please enter a username'
+                            onChange={handleChange}
+                            />
                         </label>
 
                     </div>
@@ -33,7 +56,13 @@ const Register = () => {
                         </div>
 
                         <label className="label-group">
-                            <input/>
+                            <input
+                            type='text'
+                            name='password'
+                            value={user.password}
+                            // placeholder="Enter your password"
+                            onChange={handleChange}
+                            />
                         </label> 
                     </div>
 
@@ -45,6 +74,8 @@ const Register = () => {
 
                         <label className="label-group">
                             <select
+                            name="department"
+                            onChange={handleChange}
                             >
                                 <option value =''>--select an option--</option>
                                 <option value ='client'>Client</option>
@@ -54,11 +85,9 @@ const Register = () => {
                     </div>         
 
                     {/* Submit */}
-                    {/* <div > */}
                         <div >
                             <button className='submit-button' >Submit</button>
                         </div>
-                    {/* </div>        */}
                 </form>
             </div>
 
