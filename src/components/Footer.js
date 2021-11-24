@@ -17,13 +17,13 @@ const Footer = () =>{
                     <div className="col">
                         <h4>Meet the team!</h4>
                         <ul className="list-unstyled">
-                            <li>Brandi Ball</li>
-                            <li>Cam Meiners</li>
-                            <li>Collyn Godlewski</li>
-                            <li>James Calvo</li>
-                            <li>Kat Yevsukov</li>
-                            <li>Rongjun Geng</li>
-                            <li>Tuan Nguyen</li>
+                            <li>Header</li>
+                            <li>Footer</li>
+                            <li>Home</li>
+                            <li>Register</li>
+                            <li>Login</li>
+                            <li>Logout</li>
+                            <li>Xxxxxx</li>
                         </ul>
                     </div>
 
