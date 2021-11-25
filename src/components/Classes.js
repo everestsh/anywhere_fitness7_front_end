@@ -1,26 +1,34 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
+import Class from './Class';
 
 import axios from 'axios';
 
 const Classes = () =>{
+    const [classes, setClasses] = useState([]);
 
     useEffect(() => {
         axios
         .get('https://ft-anywherefitness-7.herokuapp.com/api/classes')
         .then(res => {
             console.log(res);
-            // setAllClasses(res.data);
+            setClasses(res.data);
         })
         .catch(err => {
             console.error(err);
         })
     
     }, []);
+    console.log("Classes = ", classes)
 
     return(
             <div className="home-container">
-                <h1>Classes</h1>
+                {
+                    classes.map( (item, index) => 
+                        <Class key={index}/>
+                    )
+                }
+       
             </div>
     );
 }
