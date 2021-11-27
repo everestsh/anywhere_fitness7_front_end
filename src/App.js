@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
-// import Classes from './components/Classes';
+import Class from './components/Class';
 import ClassList from './components/ClassList';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       <Route exact path="/" component={Home}/>
       <Route exact path="/register" component={Register}/>
       <Route exact path="/login" component={Login}/>
+      <Route exact path="/classes/:id" component={Class}/>
       <Route exact path="/classes" component={ClassList}/>
     </Switch>
     <Footer />
